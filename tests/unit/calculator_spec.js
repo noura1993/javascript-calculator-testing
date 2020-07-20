@@ -27,4 +27,13 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 3)
   });
 
+  it('it should multiply numbers', function(){
+    calculator.numberClick(3)
+    calculator.operatorClick('*')
+    calculator.numberClick(5)
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 15)
+  });
+
+
 });
