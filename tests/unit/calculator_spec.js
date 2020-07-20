@@ -51,6 +51,18 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 222)
   });
 
-
+  it('it should chain multiple operations together', function(){
+    calculator.numberClick(2)
+    calculator.operatorClick('+')
+    calculator.numberClick(3)
+    calculator.operatorClick('-')
+    calculator.numberClick(1)
+    calculator.operatorClick('*')
+    calculator.numberClick(2)
+    calculator.operatorClick('/')
+    calculator.numberClick(2)
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 4)
+  });
 
 });
