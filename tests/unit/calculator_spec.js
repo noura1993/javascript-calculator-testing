@@ -65,7 +65,7 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 4)
   });
 
-  it('it should  clear the running total without affecting the calculation', function(){
+  it('it should clear the running total without affecting the calculation', function(){
     calculator.numberClick(5)
     calculator.operatorClick('+')
     calculator.clearClick()
