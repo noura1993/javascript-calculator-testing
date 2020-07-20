@@ -19,4 +19,12 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 5)
   });
 
+  it('it should subtract numbers', function(){
+    calculator.numberClick(7)
+    calculator.operatorClick('-')
+    calculator.numberClick(4)
+    calculator.operatorClick('=')
+    assert.strictEqual(calculator.runningTotal, 3)
+  });
+
 });
